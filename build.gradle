@@ -13,6 +13,8 @@ versions.load(new FileInputStream(rootProject.projectDir.path + "/version.proper
 rootProject.version = versions.version
 rootProject.group = 'dev.szymson.example'
 
+ext['spock.version'] = "${versions.spockVersion}"
+
 apply plugin: 'java'
 apply plugin: 'idea'
 apply plugin: 'org.springframework.boot'
@@ -26,7 +28,6 @@ springBoot {
             additional = [
                     'by'                   : System.properties['user.name'],
                     'operatingSystem'      : "${System.properties['os.name']} (${System.properties['os.version']})",
-                    'continuousIntegration': System.getenv('CI') ? true : false,
                     'machine'              : InetAddress.localHost.hostName,
                     'time'                 : new Date(),
                     'buildTag'             : System.getenv('BUILD_TAG') ? System.getenv('BUILD_TAG') : 'Undefined',
@@ -53,6 +54,13 @@ compileJava {
     options.encoding = "UTF-8"
 }
 
+tasks.withType(Test) {
+    useJUnitPlatform()
+    testLogging {
+        events("passed", "skipped", "failed")
+    }
+}
+
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-security'
     implementation 'org.springframework.boot:spring-boot-starter-oauth2-resource-server'
@@ -68,7 +76,13 @@ dependencies {
     providedRuntime("org.springframework.boot:spring-boot-starter-tomcat")
     providedRuntime("org.apache.tomcat.embed:tomcat-embed-core:9.0.63")
     runtimeOnly 'com.h2database:h2:2.1.214'
-    testImplementation 'org.springframework.boot:spring-boot-starter-test:2.7.2'
+
+    /* Test */
+    testImplementation("org.springframework.boot:spring-boot-starter-test")
+    testImplementation("org.spockframework:spock-core:${versions.spockVersion}")
+    testImplementation("org.spockframework:spock-spring:${versions.spockVersion}")
+    testImplementation 'org.mockito:mockito-inline:2.13.0'
+    testImplementation('io.projectreactor:reactor-test')
     testImplementation 'org.springframework.security:spring-security-test:5.7.2'
 }
 
