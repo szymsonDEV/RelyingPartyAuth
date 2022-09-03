@@ -1,4 +1,4 @@
-package dev.szymson.example.RelyingPartyAuth.U2F;
+package dev.szymson.relyingpartyauth.U2F;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;

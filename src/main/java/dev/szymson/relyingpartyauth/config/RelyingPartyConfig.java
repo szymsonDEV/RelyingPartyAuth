@@ -1,8 +1,8 @@
-package dev.szymson.example.RelyingPartyAuth.config;
+package dev.szymson.relyingpartyauth.config;
 
 import com.yubico.webauthn.RelyingParty;
 import com.yubico.webauthn.data.RelyingPartyIdentity;
-import dev.szymson.example.RelyingPartyAuth.U2F.InMemoryRegistrationStorage;
+import dev.szymson.relyingpartyauth.U2F.InMemoryRegistrationStorage;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

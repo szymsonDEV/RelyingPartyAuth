@@ -1,4 +1,4 @@
-package dev.szymson.example.RelyingPartyAuth.domain;
+package dev.szymson.relyingpartyauth.domain;
 
 import com.sun.istack.NotNull;
 import lombok.Builder;

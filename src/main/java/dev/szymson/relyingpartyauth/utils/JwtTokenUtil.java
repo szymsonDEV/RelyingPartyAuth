@@ -1,4 +1,4 @@
-package dev.szymson.example.RelyingPartyAuth.utils;
+package dev.szymson.relyingpartyauth.utils;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;

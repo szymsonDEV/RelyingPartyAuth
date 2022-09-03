@@ -1,4 +1,4 @@
-package dev.szymson.example.RelyingPartyAuth.U2F;
+package dev.szymson.relyingpartyauth.U2F;
 
 import com.yubico.webauthn.data.ByteArray;
 import com.yubico.webauthn.data.PublicKeyCredentialCreationOptions;

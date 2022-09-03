@@ -1,4 +1,4 @@
-package dev.szymson.example.RelyingPartyAuth.controller;
+package dev.szymson.relyingpartyauth.controller;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.google.common.cache.Cache;
@@ -8,10 +8,10 @@ import com.yubico.webauthn.RelyingParty;
 import com.yubico.webauthn.StartAssertionOptions;
 import com.yubico.webauthn.data.ByteArray;
 import com.yubico.webauthn.exception.AssertionFailedException;
-import dev.szymson.example.RelyingPartyAuth.U2F.AssertionRequestWrapper;
-import dev.szymson.example.RelyingPartyAuth.U2F.AssertionResponse;
-import dev.szymson.example.RelyingPartyAuth.utils.JwtTokenUtil;
-import dev.szymson.example.RelyingPartyAuth.utils.RandomGenerator;
+import dev.szymson.relyingpartyauth.U2F.AssertionRequestWrapper;
+import dev.szymson.relyingpartyauth.U2F.AssertionResponse;
+import dev.szymson.relyingpartyauth.utils.JwtTokenUtil;
+import dev.szymson.relyingpartyauth.utils.RandomGenerator;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;

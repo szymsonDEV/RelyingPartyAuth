@@ -1,18 +1,17 @@
-package dev.szymson.example.RelyingPartyAuth.controller;
+package dev.szymson.relyingpartyauth.controller;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.google.common.cache.Cache;
 import com.yubico.webauthn.*;
 import com.yubico.webauthn.data.*;
 import com.yubico.webauthn.exception.RegistrationFailedException;
-import dev.szymson.example.RelyingPartyAuth.U2F.CredentialRegistration;
-import dev.szymson.example.RelyingPartyAuth.U2F.InMemoryRegistrationStorage;
-import dev.szymson.example.RelyingPartyAuth.U2F.RegistrationRequest;
-import dev.szymson.example.RelyingPartyAuth.U2F.RegistrationResponse;
-import dev.szymson.example.RelyingPartyAuth.utils.RandomGenerator;
+import dev.szymson.relyingpartyauth.U2F.CredentialRegistration;
+import dev.szymson.relyingpartyauth.U2F.InMemoryRegistrationStorage;
+import dev.szymson.relyingpartyauth.U2F.RegistrationRequest;
+import dev.szymson.relyingpartyauth.U2F.RegistrationResponse;
+import dev.szymson.relyingpartyauth.utils.RandomGenerator;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.security.core.userdetails.User;
 import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 import org.springframework.web.bind.annotation.*;
 

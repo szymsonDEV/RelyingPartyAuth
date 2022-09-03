@@ -1,4 +1,4 @@
-package dev.szymson.example.RelyingPartyAuth.config;
+package dev.szymson.relyingpartyauth.config;
 
 import com.nimbusds.jose.jwk.JWK;
 import com.nimbusds.jose.jwk.JWKSet;

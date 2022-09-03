@@ -1,7 +1,7 @@
-package dev.szymson.example.RelyingPartyAuth.controller;
+package dev.szymson.relyingpartyauth.controller;
 
-import dev.szymson.example.RelyingPartyAuth.domain.UserDTO;
-import dev.szymson.example.RelyingPartyAuth.service.UserService;
+import dev.szymson.relyingpartyauth.domain.UserDTO;
+import dev.szymson.relyingpartyauth.service.UserService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.ResponseEntity;

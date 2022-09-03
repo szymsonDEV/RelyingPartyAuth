@@ -1,4 +1,4 @@
-package dev.szymson.example.RelyingPartyAuth.utils;
+package dev.szymson.relyingpartyauth.utils;
 
 import com.yubico.webauthn.data.ByteArray;
 

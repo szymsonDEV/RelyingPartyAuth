@@ -1,10 +1,10 @@
-package dev.szymson.example.RelyingPartyAuth.config;
+package dev.szymson.relyingpartyauth.config;
 
 import com.google.common.cache.Cache;
 import com.google.common.cache.CacheBuilder;
 import com.yubico.webauthn.data.ByteArray;
-import dev.szymson.example.RelyingPartyAuth.U2F.AssertionRequestWrapper;
-import dev.szymson.example.RelyingPartyAuth.U2F.RegistrationRequest;
+import dev.szymson.relyingpartyauth.U2F.AssertionRequestWrapper;
+import dev.szymson.relyingpartyauth.U2F.RegistrationRequest;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 

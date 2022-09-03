@@ -1,8 +1,8 @@
-package dev.szymson.example.RelyingPartyAuth.service;
+package dev.szymson.relyingpartyauth.service;
 
-import dev.szymson.example.RelyingPartyAuth.U2F.CredentialRegistration;
-import dev.szymson.example.RelyingPartyAuth.U2F.InMemoryRegistrationStorage;
-import dev.szymson.example.RelyingPartyAuth.domain.UserDTO;
+import dev.szymson.relyingpartyauth.U2F.CredentialRegistration;
+import dev.szymson.relyingpartyauth.U2F.InMemoryRegistrationStorage;
+import dev.szymson.relyingpartyauth.domain.UserDTO;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;

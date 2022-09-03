@@ -1,8 +1,8 @@
-package dev.szymson.example.RelyingPartyAuth.controller;
+package dev.szymson.relyingpartyauth.controller;
 
-import dev.szymson.example.RelyingPartyAuth.domain.UserDTO;
-import dev.szymson.example.RelyingPartyAuth.service.UserService;
-import dev.szymson.example.RelyingPartyAuth.utils.JwtTokenUtil;
+import dev.szymson.relyingpartyauth.domain.UserDTO;
+import dev.szymson.relyingpartyauth.service.UserService;
+import dev.szymson.relyingpartyauth.utils.JwtTokenUtil;
 import lombok.RequiredArgsConstructor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -11,12 +11,10 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
-import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.provisioning.InMemoryUserDetailsManager;
-import org.springframework.util.StringUtils;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
