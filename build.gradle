@@ -11,7 +11,7 @@ Properties versions = new Properties()
 versions.load(new FileInputStream(rootProject.projectDir.path + "/version.properties"))
 
 rootProject.version = versions.version
-rootProject.group = 'dev.szymson.example'
+rootProject.group = 'dev.szymson.relyingpartyauth'
 
 ext['spock.version'] = "${versions.spockVersion}"
 
