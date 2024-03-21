@@ -1,6 +1,7 @@
 package dev.szymson.relyingpartyauth.controller;
 
 import dev.szymson.relyingpartyauth.domain.UserDTO;
+import dev.szymson.relyingpartyauth.domain.UserDetailsDTO;
 import dev.szymson.relyingpartyauth.service.UserService;
 import dev.szymson.relyingpartyauth.utils.JwtTokenUtil;
 import lombok.RequiredArgsConstructor;
@@ -61,7 +62,7 @@ public class AccountResource {
 
     @GetMapping("/account")
     @PreAuthorize("hasRole('ROLE_USER')")
-    public UserDTO getAccount(Authentication authentication) {
+    public UserDetailsDTO getAccount(Authentication authentication) {
         return userService.getUser(authentication.getName());
     }
 

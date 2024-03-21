@@ -10,21 +10,16 @@ import java.util.Collection;
 import java.util.List;
 
 @Builder
-public class UserDTO {
+public class UserDetailsDTO {
 
-    @NotNull
     private String username;
-    @NotNull
-    private String password;
 
     private List<GrantedAuthority> authorities;
 
+    private int registredCredentials;
+
     public Collection<? extends GrantedAuthority> getAuthorities() {
         return Arrays.asList(new SimpleGrantedAuthority("USER"));
-    }
-
-    public String getPassword() {
-        return password;
     }
 
     public String getUsername() {
@@ -35,11 +30,15 @@ public class UserDTO {
         this.username = username;
     }
 
-    public void setPassword(String password) {
-        this.password = password;
-    }
-
     public void setAuthorities(List<GrantedAuthority> authorities) {
         this.authorities = authorities;
+    }
+
+    public int getRegistredCredentials() {
+        return registredCredentials;
+    }
+
+    public void setRegistredCredentials(int registredCredentials) {
+        this.registredCredentials = registredCredentials;
     }
 }

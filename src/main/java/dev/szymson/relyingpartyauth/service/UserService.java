@@ -1,5 +1,6 @@
 package dev.szymson.relyingpartyauth.service;
 
+import dev.szymson.relyingpartyauth.domain.UserDetailsDTO;
 import dev.szymson.relyingpartyauth.u2f.CredentialRegistration;
 import dev.szymson.relyingpartyauth.u2f.InMemoryRegistrationStorage;
 import dev.szymson.relyingpartyauth.domain.UserDTO;
@@ -38,11 +39,11 @@ public class UserService {
                         userDTO.getAuthorities()));
     }
 
-    public UserDTO getUser(String username) {
+    public UserDetailsDTO getUser(String username) {
         UserDetails user = inMemoryUserDetailsManager.loadUserByUsername(username);
         Collection<CredentialRegistration> registrationsByUsername = inMemoryRegistrationStorage.getRegistrationsByUsername(username);
 
-        return UserDTO.builder()
+        return UserDetailsDTO.builder()
                 .username(user.getUsername())
                 .registredCredentials(registrationsByUsername.size())
                 .build();

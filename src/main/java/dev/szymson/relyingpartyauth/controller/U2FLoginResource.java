@@ -50,7 +50,7 @@ public class U2FLoginResource {
     }
 
     @PostMapping("/finish")
-    public String finishAuthentication(@RequestBody AssertionResponse response) throws IOException {
+    public String finishAuthentication(@RequestBody AssertionResponse response) {
         AssertionRequestWrapper request = assertRequestStorage.getIfPresent(response.getRequestId());
         if(request == null) {
             throw new IllegalStateException("AssertionRequest not found");
