@@ -1,7 +1,7 @@
 package dev.szymson.relyingpartyauth.service;
 
-import dev.szymson.relyingpartyauth.U2F.CredentialRegistration;
-import dev.szymson.relyingpartyauth.U2F.InMemoryRegistrationStorage;
+import dev.szymson.relyingpartyauth.u2f.CredentialRegistration;
+import dev.szymson.relyingpartyauth.u2f.InMemoryRegistrationStorage;
 import dev.szymson.relyingpartyauth.domain.UserDTO;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.userdetails.User;

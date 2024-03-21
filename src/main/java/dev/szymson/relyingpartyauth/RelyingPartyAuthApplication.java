@@ -1,6 +1,6 @@
 package dev.szymson.relyingpartyauth;
 
-import dev.szymson.relyingpartyauth.U2F.InMemoryRegistrationStorage;
+import dev.szymson.relyingpartyauth.u2f.InMemoryRegistrationStorage;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
