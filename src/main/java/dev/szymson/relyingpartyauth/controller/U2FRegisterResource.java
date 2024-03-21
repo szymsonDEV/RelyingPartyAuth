@@ -26,7 +26,6 @@ import java.util.TreeSet;
 @RequiredArgsConstructor
 @RestController
 @RequestMapping("/api/v1/u2f/register")
-@CrossOrigin(origins = "http://localhost:8080")
 @Slf4j
 public class U2FRegisterResource {
 

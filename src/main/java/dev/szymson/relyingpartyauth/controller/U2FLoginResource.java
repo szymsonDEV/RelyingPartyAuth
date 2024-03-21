@@ -29,7 +29,6 @@ import java.io.IOException;
 @RequiredArgsConstructor
 @RestController
 @RequestMapping("/api/v1/u2f/login")
-@CrossOrigin(origins = "http://localhost:8080")
 @Slf4j
 public class U2FLoginResource {
 

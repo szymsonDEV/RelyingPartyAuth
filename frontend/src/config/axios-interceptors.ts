@@ -10,7 +10,7 @@ const onRequestSuccess = config => {
     }
     config.headers.Authorization = `Bearer ${token}`;
   }
-  config.headers['Access-Control-Allow-Origin'] = process.env.VUE_APP_API_URL;
+  // config.headers['Access-Control-Allow-Origin'] = process.env.VUE_APP_API_URL;
   config.timeout = TIMEOUT;
   config.url = `${process.env.VUE_APP_API_URL}${config.url}`;
   return config;

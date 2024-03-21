@@ -14,7 +14,6 @@ import org.springframework.web.bind.annotation.*;
 @RequiredArgsConstructor
 @RestController
 @RequestMapping("/api")
-@CrossOrigin(origins = "http://localhost:8080")
 @Slf4j
 public class UserResource {
 
