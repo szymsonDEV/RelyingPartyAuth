@@ -52,9 +52,9 @@ public class SecurityConfig {
             }).and()
             .csrf().disable()
             .authorizeHttpRequests((requests) -> requests
-               .mvcMatchers("/api/authenticate").permitAll()
-               .mvcMatchers("/api/register").permitAll()
-               .mvcMatchers("/api/v1/u2f/login/*").permitAll()
+               .requestMatchers("/api/authenticate").permitAll()
+               .requestMatchers("/api/register").permitAll()
+               .requestMatchers("/api/v1/u2f/login/*").permitAll()
                .anyRequest().authenticated()
             )
             .userDetailsService(users())

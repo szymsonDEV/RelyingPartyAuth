@@ -1,7 +1,7 @@
 package dev.szymson.relyingpartyauth.domain;
 
-import com.sun.istack.NotNull;
 import lombok.Builder;
+import lombok.NonNull;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 
@@ -12,9 +12,9 @@ import java.util.List;
 @Builder
 public class UserDTO {
 
-    @NotNull
+    @NonNull
     private String username;
-    @NotNull
+    @NonNull
     private String password;
 
     private List<GrantedAuthority> authorities;

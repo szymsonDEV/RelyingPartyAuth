@@ -1,6 +1,6 @@
 buildscript {
     ext {
-        springBootVersion = '2.7.3'
+        springBootVersion = '3.2.3'
     }
     dependencies {
         classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
@@ -48,8 +48,8 @@ task buildApplication {
     dependsOn war
 }
 
-sourceCompatibility = 18
-targetCompatibility = 18
+sourceCompatibility = 21
+targetCompatibility = 21
 compileJava {
     options.encoding = "UTF-8"
 }
@@ -74,7 +74,7 @@ dependencies {
     annotationProcessor "org.projectlombok:lombok",
             "org.springframework.boot:spring-boot-configuration-processor"
     providedRuntime("org.springframework.boot:spring-boot-starter-tomcat")
-    providedRuntime("org.apache.tomcat.embed:tomcat-embed-core:9.0.63")
+    providedRuntime("org.apache.tomcat.embed:tomcat-embed-core:10.1.19")
     runtimeOnly 'com.h2database:h2:2.1.214'
 
     /* Test */

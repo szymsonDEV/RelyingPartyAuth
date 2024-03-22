@@ -4,6 +4,7 @@ import dev.szymson.relyingpartyauth.domain.UserDTO;
 import dev.szymson.relyingpartyauth.domain.UserDetailsDTO;
 import dev.szymson.relyingpartyauth.service.UserService;
 import dev.szymson.relyingpartyauth.utils.JwtTokenUtil;
+import jakarta.servlet.http.HttpServletRequest;
 import lombok.RequiredArgsConstructor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -18,8 +19,6 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
-
-import javax.servlet.http.HttpServletRequest;
 
 /**
  * @author Szymon.Romanowski
